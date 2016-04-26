@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1><b><font color= "Navy"> Ku- Band Frequency Calculator</b></h1>
+<div style="position:relative; left:50px;";>By: Walter Carman </div>
+
+<style>
+* {
+ position: relative; 
+	left: 5px;
+margin: 0px;
+padding: 0px;
+}
+div#container {
+background-color: #ccf2ff;
+border: 5px solid #000080;
+width: 450px;
+height: 690px;
+}
+section#one  {
+width: 450px;
+height: 210px;
+}
+section#two  {
+width: 450px;
+height: 210px;
+position:relative: left 80px;
+}
+section#three  {
+width: 450px;
+height: 210px;
+position:relative: left 80px;
+</style>
+</head>
+	<body>
+		<div id="container">
+				<section id="one">
+					<script>
+					function convert(degree) {
+					if (degree == "C") {
+					F = (document.getElementById("c").value) - (2300);
+					(document.getElementById("f").value) =(F);
+					L = (document.getElementById("c").value) - (13050);
+					document.getElementById("l").value =(L);
+					} else	{
+					C = (+document.getElementById("f").value) + (+2300) ;
+					document.getElementById("c").value =(C);
+					L = (document.getElementById("f").value) - (10750);
+					(document.getElementById("l").value) =(L);  
+        
+						}
+					}
+
+					</script>
+					 <br>
+                                        <div style="position:relative;left:-10px;top:-10px"><h1><b><font color= "Navy">Uplink/ Downlink to L-Band</b></h1></div>
+					<div><p><font color= "black"> Insert a number into one of the input fields below:</p></div><br>
+					<form id="convert">
+					<div>Uplink Frequency <input id="c" placeholder=" 14000 - 14500" onkeyup="convert('C')"> Mhz</div><br>
+					<div>Downlink Frequency <input id="f" placeholder=" 11700 - 12200"onkeyup="convert('F')"> Mhz</div> 
+					 <br>
+					<div>L-Band Frequency <input id="l" onkeyup="convert('L')" readonly> Mhz</div>
+					 <br>
+					 <input type="button" onclick="myFunction()" value="Reset">
+					 <br>
+					</form>
+					<script>
+					function myFunction() {
+					document.getElementById("convert").reset();
+					}
+					</script>
+					
+				
+				</section>
+				<br>
+			    <section id= "three">    
+				<div style="position:relative;left:-5px;">
+				 <div style="posistion:relative;left:-10px;"><h1><b><font color= "Navy">L-Band to Uplink/ Downlink</b></h1></div><br>
+				 <script> 
+				  function lband() { 
+                                var x = document.getElementById("m").value;
+				var y = document.getElementById("o").value;
+				var z = +x + +(13050);
+                                document.getElementById("n").value = z; 
+                                var y = +x + +(10750);
+                                document.getElementById("o").value = y;}
+                     
+					
+				 </script>
+					<div><p><font color= "black"> Insert a number into the input field below:</p></div><br>
+					<form id="lband">
+					<div>L-Band Frequency <input id="m" onkeyup="lband()" placeholder=" 950 - 1450"> Mhz</div>
+					 <br>
+					<div>Uplink Frequency <input id="n" readonly> Mhz</div><br>
+					<div>Downlink Frequency <input id="o" readonly> Mhz</div> 
+					 <br>
+
+					 <input type="button" onclick="erase()" value="Reset">
+					 <br>
+					</form>
+				  <br>
+					<script>
+					function erase() {
+					document.getElementById("lband").reset();
+					}
+					</script>
+
+				 
+				 
+				 
+				 
+				 
+				</div>
+				</section>
+                                <br>
+				<section id= "two">
+				<div style="position:relative;left:-25px;top:10px"><h1><b><font color= "Navy"> IF Calculator</b></h1></div><br>
+				 <br>
+
+                                <div style="position:relative;left:-10px; top:-5px">
+				<div><p><font color= "black"> Insert a number into the input fields below:</p></div>
+				 <br>
+				<script>
+				function change(){
+				var x = document.getElementById("btn1").value;
+				var y = document.getElementById("btn2").value;
+				var z = 70 - (x - y);
+				document.getElementById("btn3").value = z;}
+				</script>
+				<form id="if">
+				 <div>Converter Center Frequency <input id="btn1"> Mhz</div>
+				 <br>
+				 <div>Actual L-Band Frequency <input id="btn2" onkeyup="change()"> Mhz</div>
+				 <br>
+				 <div>IF Frequency <input id="btn3" onkeyup="change()" readonly> Mhz</div>
+				 <br>
+				 <input type="button" onclick="clearif()" value="Reset">
+				 <br>
+				</form>
+				<script>
+				function clearif() {
+				document.getElementById("if").reset();
+				}
+				</script>
+				</div>
+				</section>
+		</div>
+	</body>
+</html>
