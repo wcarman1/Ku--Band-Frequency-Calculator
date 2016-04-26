@@ -4,7 +4,5 @@ written in HTML/javascript.
 
 Just download the HTML file and open it with a browser
 
-converts 1.  uplink frequency to downlink and to L-band (950-1450Mhz)
-         2.  L-band to uplink and downlink
-         3.  has an IF calculator built in
+converts uplink frequency to downlink and to L-band (950-1450Mhz); L-band to uplink and downlink; has an IF calculator built in.
 
