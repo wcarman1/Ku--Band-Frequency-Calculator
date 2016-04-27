@@ -2,34 +2,21 @@
 <html>
 <head>
 <h1><b><font color= "Navy"> Ku- Band Frequency Calculator</b></h1>
-<div style="position:relative; left:50px;";>By: Walter Carman </div>
+<div>By: Walter Carman </div>
 
 <style>
-* {
- position: relative; 
-	left: 5px;
-margin: 0px;
-padding: 0px;
+*{
+     margin:0px auto;
+}
+
+html, body{
+     text-align:center;
 }
 div#container {
 background-color: #ccf2ff;
 border: 5px solid #000080;
-width: 450px;
-height: 690px;
-}
-section#one  {
-width: 450px;
-height: 210px;
-}
-section#two  {
-width: 450px;
-height: 210px;
-position:relative: left 80px;
-}
-section#three  {
-width: 450px;
-height: 210px;
-position:relative: left 80px;
+width: 375px;
+height: 850px;
 }
 </style>
 </head>
@@ -51,7 +38,6 @@ position:relative: left 80px;
         
 						}
 					}
-
 					</script>
 					 <br>
                                         <div style="position:relative;left:-10px;top:-10px"><h1><b><font color= "Navy">Uplink/ Downlink to L-Band</b></h1></div>
@@ -65,6 +51,7 @@ position:relative: left 80px;
 					 <input type="button" onclick="myFunction()" value="Reset">
 					 <br>
 					</form>
+					<br>
 					<script>
 					function myFunction() {
 					document.getElementById("convert").reset();
@@ -105,12 +92,6 @@ position:relative: left 80px;
 					document.getElementById("lband").reset();
 					}
 					</script>
-
-				 
-				 
-				 
-				 
-				 
 				</div>
 				</section>
                                 <br>
@@ -129,7 +110,7 @@ position:relative: left 80px;
 				document.getElementById("btn3").value = z;}
 				</script>
 				<form id="if">
-				 <div>Converter Center Frequency <input id="btn1"> Mhz</div>
+				 <div style="position:relative; left:10px">Converter Center Frequency <input id="btn1"> Mhz</div>
 				 <br>
 				 <div>Actual L-Band Frequency <input id="btn2" onkeyup="change()"> Mhz</div>
 				 <br>
